@@ -1,2 +1,2 @@
 # Fetching-worldwide-University
-Featching University uisng public APIs
+Fetching Universities using public APIs (Under Development)
