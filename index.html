@@ -4,74 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Find Your College</title>
 </head>
-
 <body>
     <div class="main-heading">
         <div class="logoarea">
             <!-- <img src="x" alt="" id="logoimage"> -->
+            <span class="logo-text">HiddenQ</span>
         </div>
-        <div class="links">
-        <ul>
-            <li><a href="#">Colleges</a></li>
-            <li><a href="#">Top News</a></li>
-            <li><a href="#">resturants</a></li>
-            <li><a href="#">Free Books</a></li>
-            <li><a href="#">Free Couses</a></li>
-        </ul>
+        <div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Triple arrow icon -->
+        <div class="links" id="nav-links">
+            <ul>
+                <li><a href="#">Colleges</a></li>
+                <li><a href="#">Top News</a></li>
+                <li><a href="#">Free Books</a></li>
+                <li><a href="#">Free Courses</a></li>
+            </ul>
         </div>
         <div class="auth">
-            <button id="ignup">SignUp</button>
+            <button id="signup">SignUp</button>
             <button id="login">Login</button>
         </div>
     </div>
+    
 
-
+    <!-- Main Section -->
     <div class="main_div">
-        <h1 class="heading">Find your College in Just one Click</h1>
-        <p class="para">Here you can find famous Colleges in different countries like India, USA, UK, etc.</p>
+        <h1 class="heading">Find Your College with Just One Click</h1>
+        <p class="para">Explore renowned colleges across various countries, including India, USA, UK, and more. Start your journey today!</p>
     </div>
+    
+    <!-- Search Section -->
     <div class="search-container">
-        <input type="text" placeholder="Search for colleges in Different countries...." id="inp">
+
+       <input type="text" placeholder="Search for colleges in different countries..." id="inp">
         <button id="btn">Search</button>
     </div>
-    <ul class="results"></ul>
+
+    <!-- College Results -->
+    <div class="college-container"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 <script src="app.js"></script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

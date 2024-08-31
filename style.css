@@ -8,56 +8,175 @@
     padding: none;
 }
 
-/* General styles for the main heading */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(219, 229, 240, 0.644);
+}
 .main-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa; /* Example background color */
+    background-color: #333;
     padding: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
-/* Logo area styles */
-.logoarea {
-    flex: 1;
-    padding: 10px;
-}
-
-#logoimage {
-    max-height: 50px; /* Adjust the logo size */
-}
-
-/* Links styles */
-.links {
-    flex: 2;
-    text-align: center;
+.logo-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
 }
 
 .links ul {
     display: flex;
-    justify-content: center;
-    list-style: none; /* Remove default list styling */
+    list-style: none;
+    margin-left: 200px;
     padding: 0;
-    margin: 0;
 }
 
 .links li {
-    margin: 0 15px; /* Space between the links */
+    margin-right: 20px;
 }
 
 .links a {
-    color: rgb(5, 5, 5);
+    color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-    border-radius: 5px; /* Optional rounded corners */
+    padding: 5px 10px;
+    transition: background-color 0.3s;
 }
 
 .links a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #575757;
+    border-radius: 5px;
 }
+
+.auth button {
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.auth button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Menu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 1090px) {
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .links.active {
+        display: flex;
+        height: auto;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+    .links ul li{
+        margin: 10px;
+    }
+    .auth {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* Main Section styles */
+.main_div {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* background-image: url(img/clg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover; */
+}
+.main_div h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main_div p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Section styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 40px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#inp {
+    width: 100%;
+    padding: 22px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 25px 0 0 25px;
+    box-sizing: border-box;
+}
+
+#btn {
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    padding: 22px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+
+
+
 
 /* Authentication buttons styles */
 .auth {
@@ -67,7 +186,7 @@
 }
 
 .auth button {
-    color: #28a745;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
     margin-left: 10px;
@@ -75,96 +194,123 @@
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgb(65, 64, 64);
 }
 
 .auth button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: gray; /* Darker green on hover */
     color: white;
 }
 
 
 
-
-
-
- /*After heading */
-
-.main_div{
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    justify-content: center;
-    font-family: myfont;
-}
-.main_div h1{
-    font-size: 45px;
-}
-.main_div p{
-    margin-top: -13px;
-    font-weight: lighter;
-}
-/* Styling the search container and its elements */
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%; /* Adjust as needed */
-    margin: 40px auto; /* Center the search bar on the page with some margin on top */
-    border-radius: 25px;
-    overflow: hidden; /* Ensures the elements stay within the rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
-}
-
-#inp {
-    width: 100%; /* Fill the available space */
-    padding: 20px 20px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    border-radius: 25px 0 0 25px; /* Rounded corners on the left */
-    box-sizing: border-box; /* Keep padding inside the element */
-    font-size: 16px;
-}
-
-#btn {
-    background-color: #ff6600; /* Orange color */
-    color: white;
-    padding: 20px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 0 25px 25px 0; /* Rounded corners on the right */
-    transition: background-color 0.3s ease;
-}
-
-#btn:hover {
-    background-color: #e65c00; /* Darker orange on hover */
-}
-
-.results {
-    margin-top: 20px;
+/* General reset and box-sizing */
+* {
+    margin: 0;
     padding: 0;
-    text-align: center; /* Center the list items */
-    margin-left: -130px;
+    box-sizing: border-box;
 }
 
-.results li {
-    width: 300px; /* Set a consistent width */
-    padding: 5px 10px;
-    margin: 12px auto; /* Center each <li> horizontally */
-    white-space: nowrap;
-    text-overflow: ellipsis;
+body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-align: left; /* Align text inside each <li> to the left */
 }
 
+/* Header and main styles remain the same as before */
 
+/* Styling for the college container */
+.college-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.college-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    width: calc(27% - 30px); /* Four cards per row, adjust with margins */
+    height: 235px; /* Increase the height of the cards */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.college-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 
+.college-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
 
+.college-card p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #666;
+}
 
+.college-card .visit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the button horizontally */
+    text-decoration: none;
+}
+
+.college-card .visit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .college-card {
+        width: calc(33.333% - 30px); /* Three cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .college-card {
+        width: calc(50% - 30px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 600px) {
+   
+    .college-card {
+        width: calc(100% - 30px); /* One card per row */
+    }
+    .search-container{
+        width: 93%;
+    }
+    .main_div {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f8f9fa; /* Light background for contrast */
+        margin-top: 0px;
+    }
+    .main_div .heading {
+        font-size: 25px;
+    }
+    .main_div .para {
+        font-size: 15px;
+    }
+}
 
 
 
